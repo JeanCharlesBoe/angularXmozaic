@@ -1,0 +1,27 @@
+<!-- <eui-masthead [ngClass]="'no-logo'" (logoClicked)="goHome()">
+    <mat-toolbar color="primary" data-imx-identifier="masthead-toolbar">
+      <mat-toolbar-row>
+        <img class="custom-logo" *ngIf="logoUrl" src="../../../../assets/logo2.png" (keydown.enter)="goHome()" (click)="goHome()"> 
+        <h1 class="app-name" tabindex="0" [ngStyle]="{'cursor': isAppOverview ? 'default' : 'pointer'}" (keydown.enter)="goHome()" (click)="goHome()">
+          {{productName}}
+        </h1>
+        <span class="head-space"></span>
+        <span class="head-controls">
+          <ng-template [ngTemplateOutlet]="mastHeadMenu"></ng-template>
+        </span>
+      </mat-toolbar-row>
+    </mat-toolbar>
+  </eui-masthead>
+  
+  <ng-template #mastHeadMenu>
+    <button mat-button class="head-user-button" #menuTrigger="matMenuTrigger" [matMenuTriggerFor]="userMenu"data-imx-identifier="user-menu">
+      <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
+      <span>{{ sessionState?.Username }}</span>
+    </button>
+    <mat-menu #userMenu="matMenu">
+      <ng-content select="[imx-profile-menu-items]"></ng-content>
+      <button mat-menu-item data-imx-identifier="user-menu-signout" (click)="logout()">
+        <span translate>#Log out</span>
+      </button>
+    </mat-menu>
+  </ng-template> -->

@@ -1,0 +1,37 @@
+
+<!-- <mat-card [class.mat-elevation-z1]="!mouseOvered" [class.mat-elevation-z4]="mouseOvered"
+(mouseover)="mouseOvered=true" (mouseout)="mouseOvered=false"
+[attr.data-ccc-identifier]="'tile-mat-card-default-'+identifier" (click)="onRedirect()">
+  <mat-card-title [matTooltip]="caption">
+        <eui-icon *ngIf="image" data-imx-identifier="iconTile-eui-icon" size="m" icon="{{image}}"></eui-icon>
+        <div>{{caption}}</div>
+    </mat-card-title>
+      <mat-card-subtitle>
+        <div>{{subtitle}}</div>
+      </mat-card-subtitle>
+      <mat-card-actions align="start" *ngIf="actionTemplate">
+        <ng-container *ngTemplateOutlet="actionTemplate">
+        </ng-container>
+      </mat-card-actions>
+</mat-card> -->
+
+ <!-- <moz-card [outlined]="true" [fluid]="false">
+  <h1 class="mc-card_title">Create a new identity</h1>
+  <p content>
+    Choisissez parmi tous les types de comptes possibles, l'identité que vous souhaitez créer
+  </p>
+</moz-card> -->
+
+<!-- <div>
+  <m-hero title="Create a new identity">
+    <p style="margin: 0px;">Choisissez parmi tous les types de comptes possibles, l'identité que vous souhaitez créer</p>
+    <small slot="footer"></small>
+  </m-card>
+</div> -->
+
+<div class="m-hero" >
+  <m-hero title="Create a new identity" (click)="onRedirect()" >
+    <p>Choisissez parmi tous les types de comptes possibles, l'identité que vous souhaitez créer</p>
+  </m-hero>
+</div>
+

@@ -1,0 +1,196 @@
+<!-- <div>
+  <mat-card [formGroup]="identityForm" class="indentity-form">
+    <mat-card-title>Créer un compte de prestataire</mat-card-title>
+  
+    <mat-card class="form-card" formGroupName="personalInfo">
+      <mat-card-subtitle>Données personnelles</mat-card-subtitle>
+      <div class="form-row">
+        <mat-form-field appearance="fill">
+          <mat-label>Nom</mat-label>
+          <input type="text" matInput formControlName="lastName">
+          <mat-error>Ce champ est requis</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="form-row">
+        <mat-form-field appearance="fill">
+          <mat-label>Nom d'usage</mat-label>
+          <input type="text" matInput formControlName="usageLastName">
+          <mat-error>Ce champ est requis</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="form-row">
+        <mat-form-field appearance="fill">
+          <mat-label>Prénom</mat-label>
+          <input type="text" matInput formControlName="firstName">
+          <mat-error>Ce champ est requis</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="form-row">
+        <mat-form-field appearance="fill">
+          <mat-label>Prénom d'usage</mat-label>
+          <input type="text" matInput formControlName="usageFirstName">
+          <mat-error>Ce champ est requis</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="form-row">
+        <mat-form-field appearance="fill">
+          <mat-label>Date de naissance</mat-label>
+          <input [matDatepicker]="picker" matInput formControlName="birthdayDate">
+          <mat-hint>DD/MM/YYYY</mat-hint>
+          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+          <mat-error>Ce champ est requis</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="form-row">
+        <mat-form-field appearance="fill">
+          <mat-label>Genre</mat-label>
+           <mat-select formControlName="gender">
+            <mat-option value="1">Non Binaire</mat-option>
+            <mat-option value="2">Féminin</mat-option>
+            <mat-option value="3">Masculin</mat-option>
+          </mat-select>
+          <mat-error>Ce champ est requis</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="form-row">
+        <mat-form-field appearance="fill">
+          <mat-label>Photo</mat-label>
+          <input type="text" matInput formControlName="picture">
+          <mat-error>Ce champ est requis</mat-error>
+        </mat-form-field>
+      </div>
+    </mat-card>
+    <mat-card class="form-card" formGroupName="orgaInfo">
+      <mat-card-subtitle>Informations de l'organisation</mat-card-subtitle>
+      <div class="form-row">
+        <mat-form-field appearance="fill">
+          <mat-label>Manager</mat-label>
+          <input type="text" matInput formControlName="manager">
+          <mat-error>Ce champ est requis</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="form-row">
+        <mat-form-field appearance="fill">
+          <mat-label>Service & équipe</mat-label>
+          <input type="text" matInput formControlName="team">
+          <mat-error>Ce champ est requis</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="form-row">
+        <mat-form-field appearance="fill">
+          <mat-label>Métier</mat-label>
+          <input type="text" matInput formControlName="job">
+          <mat-error>Ce champ est requis</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="form-row">
+        <mat-form-field appearance="fill">
+          <mat-label>Global Job Profile</mat-label>
+          <input type="text" matInput formControlName="globalJobProfile">
+          <mat-error>Ce champ est requis</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="form-row">
+        <mat-form-field appearance="fill">
+          <mat-label>Date de démarrage</mat-label>
+          <input [matDatepicker]="picker" matInput formControlName="startedDate">
+          <mat-hint>DD/MM/YYYY</mat-hint>
+          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+          <mat-error>Ce champ est requis</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="form-row">
+        <mat-form-field appearance="fill">
+          <mat-label>Date de départ</mat-label>
+          <input [matDatepicker]="picker" matInput formControlName="endDate">
+          <mat-hint>DD/MM/YYYY</mat-hint>
+          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+          <mat-error>Ce champ est requis</mat-error>
+        </mat-form-field>
+      </div>
+    </mat-card>
+    
+    <mat-card class="form-card" formGroupName="localisationInfo">
+      <mat-card-subtitle>Informations de localisation</mat-card-subtitle>
+      <div class="form-row">
+        <mat-form-field appearance="fill">
+          <mat-label>Lieu de travail</mat-label>
+          <input type="text" matInput formControlName="workPlace">
+          <mat-error>Ce champ est requis</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="form-row">
+        <mat-form-field appearance="fill">
+          <mat-label>Bâtiment</mat-label>
+          <input type="text" matInput formControlName="building">
+          <mat-error>Ce champ est requis</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="form-row">
+        <mat-form-field appearance="fill">
+          <mat-label>Etage</mat-label>
+          <input type="text" matInput formControlName="floor">
+          <mat-error>Ce champ est requis</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="form-row">
+        <mat-form-field appearance="fill">
+          <mat-label>Bureau</mat-label>
+          <input type="text" matInput formControlName="desk">
+          <mat-error>Ce champ est requis</mat-error>
+        </mat-form-field>
+      </div>
+    </mat-card>
+    
+    <mat-card class="form-card" formGroupName="contact">
+      <mat-card-subtitle>Informations de contact</mat-card-subtitle>
+      <div class="form-row">
+        <mat-form-field appearance="fill">
+          <mat-label>Adresse email professionnelle</mat-label>
+          <input type="text" matInput formControlName="mailPro">
+          <mat-error>Ce champ est requis</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="form-row">
+        <mat-form-field appearance="fill">
+          <mat-label>Adresse email société externe</mat-label>
+          <input type="text" matInput formControlName="mailExterne">
+          <mat-error>Ce champ est requis</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="form-row">
+        <mat-form-field appearance="fill">
+          <mat-label>Téléphone mobile</mat-label>
+          <input type="text" matInput formControlName="mobilePhone">
+          <mat-error>Ce champ est requis</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="form-row">
+        <mat-form-field appearance="fill">
+          <mat-label>Téléphone fixe</mat-label>
+          <input type="text" matInput formControlName="phone">
+          <mat-error>Ce champ est requis</mat-error>
+        </mat-form-field>
+      </div>
+    </mat-card>
+  
+    <mat-card class="form-card" formGroupName="account">
+      <mat-card-subtitle>Comptes et accès supplémentaires</mat-card-subtitle>
+       <div class="form-row">
+        <mat-checkbox formControlName="accountGoogle">Compte Google Worksplace (messagerie et applications)</mat-checkbox>
+      </div>
+      <div class="form-row">
+        <mat-checkbox formControlName="accountFacebook">Compte FaceBook Workplace + Workchat</mat-checkbox>
+      </div>
+    </mat-card>
+  
+    <mat-card-actions *ngIf="identityForm.valid">
+      <button mat-flat-button color="primary" (click)="onSubmitForm()">Créer l'utilisateur</button>
+    </mat-card-actions>
+  </mat-card>
+</div> -->
+
+toto

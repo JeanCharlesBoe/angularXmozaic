@@ -1,0 +1,44 @@
+// @import "@elemental-ui/core/src/styles/_palette.scss";
+// @import '@elemental-ui/core/src/styles/_eui_palette.scss';
+img{
+  height: 50px;
+  cursor: pointer;
+}
+mat-toolbar{
+}
+
+.app-name{
+  margin-left: 10px;
+  margin-right: 5px;
+}
+
+
+
+
+:host{
+  .head-space {
+    flex: 1 1 auto;
+  }
+
+  .head-controls {
+    button[mat-button] {
+      &:not(.head-user-button) {
+        padding: 0;
+        width: 40px;
+        min-width: 40px;
+      }
+    }
+    .head-icon-button {
+      min-width: 40px;
+  
+      span {
+         display: none;
+      }
+    }
+  }
+}
+
+/* hide the logo inside the masthead if needed */
+::ng-deep eui-masthead.no-logo eui-logo {
+  display: none;
+}
